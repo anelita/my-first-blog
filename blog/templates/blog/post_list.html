@@ -7,6 +7,14 @@
       <h1><a href="">Mein Food-Blog</a></h1>
     </div>
 
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    
     <div>
         <h2><a href="">Chocolate-Chip-Küchlein</a></h2>
         <p>published: 07.05.2017, 11:48</p>
